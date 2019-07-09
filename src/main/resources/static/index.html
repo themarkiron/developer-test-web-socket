@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bots -Anonymous  - Chat</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+
+    <script src="/app.js"></script>
+</head>
+<body>
+
+
+<div id="main-content" class="container">
+    <div class="row" style="background-color: #0C97E8;">
+        <div class="col-md-12">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="from" style="color: white">Join the Conversation</label>
+                    <input type="text" id="from"  class="form-control" placeholder="Enter a shortname">
+                    <button id="connect" class="btn btn-default" type="submit">Join</button>
+                    <button id="disconnect" class="btn btn-default" type="submit" disabled="disabled">Leave</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row" style="border-top: solid 2px #C7440C;">
+    		<div class="col-xs-4">
+    			<h3>Members</h3>
+            <table id="memberslog" class="table" style="border: solid 2px #B5A410">
+                <thead>
+                </thead>
+                <tbody id="members">
+                </tbody>
+            </table>
+    		</div>
+        <div class="col-xs-8">
+        		<h3>Messages</h3>
+            <table id="conversation" class="table table-striped">
+                <thead>
+                <tr id="typingUpdates">
+                </tr>
+                <tr id="errorMessages" style="color: red;">
+                </tr>
+                </thead>
+                <tbody id="chatMessages">
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="row" style="background-color: #0C97E8; border-top: solid 2px #C7440C;" >
+    		<div class="col-md-6">
+            <form class="form-inline">
+                <div class="form-group">
+                    <label for="message" style="color: white">Send a Message</label>
+                    <input type="text" id="message" class="form-control" placeholder="Your message">
+                </div>
+                <button id="send" class="btn btn-default" type="submit">Send</button>
+            </form>
+        </div>
+     </div>
+</div>
+</body>
+</html>
